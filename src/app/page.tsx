@@ -1,9 +1,22 @@
-import LoginScreen from "./components/LoginScreen";
-import ArtSearchScreen from "./components/ArtSearchScreen/index";
-import ListArtwork from "./components/ListArtwork";
+import React from "react";
+import LoginScreen from "./components/loginScreen";
+import ArtworkSearchScreen from "./components/artworkSearchScreen";
+import ListArtwork from "./components/listArtwork";
+import UserProfileScreen from "./components/userProfileScreen";
+import Card from "./components/userProfileScreen/card";
 
-export default function Home() {
+const Home = () => {
   return (
-    <ListArtwork />
+    <div>
+      <LoginScreen />
+      {/* <ArtworkSearchScreen />
+      <ListArtwork />
+      <div style={{ display: "flex" }}>
+        <UserProfileScreen />
+        <Card />
+      </div> */}
+    </div>
   );
-}
+};
+
+export default Home;

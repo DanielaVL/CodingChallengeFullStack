@@ -1,6 +1,12 @@
+'use client';
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const Index = () => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/userProfileScreen");
+  }
   return (
     <div>
       <div className="bg-white dark:bg-gray-900">
@@ -57,7 +63,7 @@ const Index = () => {
                       type="email"
                       name="email"
                       id="email"
-                      placeholder="ejemplo@ejemplo.com"
+                      placeholder="danivaslo@ejemplo.com"
                       className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
@@ -79,13 +85,13 @@ const Index = () => {
                       type="password"
                       name="password"
                       id="password"
-                      placeholder="Tu contraseña"
+                      placeholder="contraseña"
                       className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
 
                   <div className="mt-6">
-                    <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                    <button onClick={handleClick} className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                       Iniciar sesión
                     </button>
                   </div>

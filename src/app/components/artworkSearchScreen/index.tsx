@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Card from "../ListArtwork/card";
+//import Card from "../listArtwork/card";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
